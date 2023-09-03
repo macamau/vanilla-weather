@@ -67,13 +67,17 @@ function submission(event) {
 function displayFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celsiusTemp * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
-function displayCelsius(event){
+function displayCelsius(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature")
-  temperatureElement.innerHTML= Math.round(celsiusTemp)
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
 let celsiusTemp = null;
 
