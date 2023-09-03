@@ -49,7 +49,7 @@ function displayTemp(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0], description);
 }
-function seatch(city) {
+function search(city) {
   let apiKey = "44071a77806b1fba507463ba973d6aa5";
   let City = "Paris";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${apiKey}&units=metric`;
